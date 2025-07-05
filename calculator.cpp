@@ -1,11 +1,3 @@
-#include <iostream>
-#include <string>
-#include <vector>
-#include <iomanip>
-#include <cmath>
-#include <limits>
-
-// Inclusao completa para garantir compatibilidade como no original
 #include <bits/stdc++.h> 
 
 using namespace std;
