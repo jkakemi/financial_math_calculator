@@ -6,7 +6,6 @@
 
 using namespace std;
 
-// Declarações internas para este arquivo, pois não precisam ser acessadas de fora
 void calcularMontanteSimples();
 void calcularCapitalSimples();
 void calcularJurosSimples();
@@ -14,8 +13,6 @@ void calcularTaxaSimples();
 void calcularTempoSimples();
 void calcularTaxaEfetiva();
 void calcularTaxaComercial();
-
-// --- Implementações Juros Simples ---
 
 void calcularMontanteSimples() {
     cout << "\n--- Calcular Montante (VF) - Juros Simples ---\n";
@@ -221,7 +218,6 @@ void calcularTempoSimples() {
     cout << "----------------------------------------\n";
 }
 
-// --- Implementações Desconto Comercial ---
 
 void calcularTaxaEfetiva() {
     cout << "\n--- Calcular Taxa Efetiva (i) a partir da Comercial (ic) ---\n";
@@ -256,8 +252,6 @@ void calcularTaxaComercial() {
     cout << "Taxa de desconto comercial (ic) - " << ic * 100 << "%" << endl;
     cout << "----------------------------------------\n";
 }
-
-// --- Funções de Menu ---
 
 void menuJurosSimples() {
     int escolha;
