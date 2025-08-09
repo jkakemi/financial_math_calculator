@@ -109,7 +109,7 @@ void calcularTempoComposto() {
     double vf = obterEntradaNumerica("Montante (VF) - ");
     double i = obterEntradaNumerica("Taxa (i) em decimal (ex: 0.05 para 5%) - ");
     if (vp <= 0 || vf <= 0 || i <= -1 || log(1 + i) == 0) {
-        cout << "Erro: Valores invalidos. VP e VF devem ser positivos, taxa > -100% e nao pode ser 0.\n";
+        cout << "Valores invalidos!\n";
         return;
     }
     double n = log(vf / vp) / log(1 + i);
