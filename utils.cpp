@@ -35,6 +35,7 @@ int obterUnidadeTempo(const string& tipo) {
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }
 }
+
 // Converte o tempo de uma unidade para outra
 // Usa o ano comercial (360 dias) e mês comercial (30 dias)
 double converterTempo(double tempo, TimeUnit unidadeOrigem, TimeUnit unidadeDestino) {

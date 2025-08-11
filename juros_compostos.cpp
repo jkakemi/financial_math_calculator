@@ -123,9 +123,9 @@ void calcularTempoComposto() {
 void calcularTaxaProporcional() {
     cout << "\n--- Calcular Taxa Proporcional (Efetiva a partir da Nominal) ---\n";
     double k = obterEntradaNumerica("i (k nominal) em decimal (ex: 0.12 para 12%) - ");
-    //cout << "Unidade da taxa nominal:" << endl;
-    int unidadeNominal = obterUnidadeTempo("taxa nominal");
-    //cout << "Unidade da taxa proporcional:" << endl;
+    
+    int unidadeNominal = ANOS;
+
     int unidadeProporcional = obterUnidadeTempo("taxa proporcional");
     double fator = converterTempo(1.0, (TimeUnit)unidadeNominal, (TimeUnit)unidadeProporcional);
     if (fator == 0) {
@@ -143,10 +143,10 @@ void calcularTaxaProporcional() {
 void calcularTaxaNominal() {
     cout << "\n--- Calcular Taxa Nominal (a partir da Efetiva/Proporcional) ---\n";
     double i_prop = obterEntradaNumerica("i proporcional (efetiva) em decimal (ex: 0.01 para 1%) - ");
-    //cout << "Unidade da taxa proporcional:" << endl;
+
     int unidadeProporcional = obterUnidadeTempo("taxa proporcional");
-    //cout << "Unidade da taxa nominal desejada:" << endl;
-    int unidadeNominal = obterUnidadeTempo("taxa nominal");
+
+    int unidadeNominal = ANOS;
     double fator = converterTempo(1.0, (TimeUnit)unidadeNominal, (TimeUnit)unidadeProporcional);
      if (fator == 0) {
         cout << "Nao foi possivel converter as unidades!\n";
@@ -163,9 +163,8 @@ void calcularTaxaNominal() {
 void calcularTaxasEquivalentes() {
     cout << "\n--- Calcular Taxas Equivalentes ---\n";
     double i_conhecida = obterEntradaNumerica("Taxa conhecida (i) em decimal (ex: 0.01 para 1%) - ");
-    //cout << "Unidade da taxa conhecida:" << endl;
+
     int unidadeOrigem = obterUnidadeTempo("taxa conhecida");
-    //cout << "Unidade da taxa equivalente desejada:" << endl;
     int unidadeDestino = obterUnidadeTempo("taxa equivalente");
 
     if(unidadeOrigem < unidadeDestino){
